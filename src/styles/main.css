@@ -1,0 +1,409 @@
+img {
+  display: block;
+}
+
+
+ 
+body {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+ 
+
+ 
+#drawer {
+  width: 250px;
+  height: 100%;
+  position: absolute;
+  transform: translate(-250px, 0);
+  transition: transform 0.3s ease-in-out;
+  background-color:#02305e;
+  z-index: 1001;
+}
+ 
+#drawer.open {
+  transform: translate(0,0)
+}
+ 
+ 
+ 
+/* styling pendukung */
+ 
+main {
+  padding: 16px;
+}
+ 
+#drawer ul {
+  list-style-type: none;
+  padding: 0 16px;
+}
+ 
+#drawer li {
+  padding: 5px 0px;
+}
+ 
+#drawer a {
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+a {
+  display: inline-block; /* Pastikan anchor dapat memiliki dimensi */
+  min-width: 44px;
+  min-height: 44px;
+  /* Tambahkan padding tambahan jika diperlukan */
+  padding: 10px;
+}
+ 
+#hamburger {
+  font-size: 32px;
+  text-decoration: none;
+  color: #879099;
+  min-height: 44px;
+  min-width: 44px;
+  
+}
+header h1 {
+  background-color: #02305e;
+  color: aliceblue;
+  text-align: center;
+}
+
+.skip-to-content {
+  color: #194a7a;
+  position: absolute;
+  top: -40px;
+  left: 0;
+  min-height: 44px;
+  min-width: 44px;
+ 
+  z-index: 100;
+  
+}
+.skip-to-content:focus {
+  top: 0; 
+  
+}
+
+#drawer .nav-item {
+  margin-bottom: 15px;
+  color: #879099;
+  min-height: 44px;
+  min-width: 44px;
+  
+}
+
+#drawer .nav-link {
+  color:#cbd6e2;
+  text-decoration: none;
+  font-size: 2em;
+  min-height: 44px;
+  min-width: 44px;
+}
+
+.jumbo-image {
+  width: 100%;
+}
+
+.hero {
+  position: relative; 
+}
+
+.hero h1 {
+  position: absolute;
+  top: 30%;
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  color: rgb(27, 33, 112); 
+  text-align: center; 
+  font-size: 42px; 
+  font-weight: bold; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  min-height: 44px;
+  min-width: 44px;
+}
+
+.hero p {
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  color: rgb(80, 52, 179);
+  text-align: center;
+  font-size: 27px;
+  font-weight: bold; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+  z-index: 1; 
+  min-height: 44px;
+  min-width: 44px;
+}
+.btn {
+  display: inline-block;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 10px 20px;
+  background-color: #2f9485; 
+  color: white; 
+  font-size: 16px; 
+  text-decoration: none; 
+  border: none; 
+  border-radius: 5px;
+  transition: background-color 0.3s ease; 
+  position: absolute;
+  top: 70%; 
+  left: 50%;
+  transition: transform 0.2s ease;
+
+
+}
+
+.btn:hover {
+  background-color: #20665b; 
+}
+
+:active {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  
+}
+.wrapper h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.restaurant-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+  
+}
+
+.restaurant {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+
+}
+
+.restaurant img {
+  width: 100%;
+  height: auto;
+}
+
+.restaurant-info h3 {
+  margin-top: 0;
+}
+
+.restaurant-info p {
+  margin: 5px 0;
+}
+
+footer {
+  background-color: #284b80;
+  color: #fff; 
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Untuk lebar layar >= 1220px */
+/* @media(min-width: 1220px) {
+  .jumbo-image {
+    min-width: 1000px;
+    width: auto;
+  }
+} */
+
+/* Untuk lebar layar >= 768px dan < 1220px */
+@media(min-width: 768px) and (max-width: 1219px) {
+  .wrapper {
+    padding: 20px 30px; /* Sesuaikan padding sesuai kebutuhan */
+  }
+  .hero {
+    position: relative; 
+  }
+  
+  .hero h1 {
+    position: absolute;
+    top: 30%;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: rgb(27, 33, 112); 
+    text-align: center; 
+    font-size: 39px; 
+    font-weight: bold; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    min-height: 44px;
+    min-width: 44px;
+  }
+  .hero p {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: rgb(80, 52, 179);
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    z-index: 1; 
+    min-height: 44px;
+    min-width: 44px;
+  }
+  .btn {
+    display: inline-block;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 10px 20px;
+    background-color: #2f9485; 
+    color: white; 
+    font-size: 16px; 
+    text-decoration: none; 
+    border: none; 
+    border-radius: 5px;
+    transition: background-color 0.3s ease; 
+    position: absolute;
+    top: 70%; 
+    left: 50%;
+    transition: transform 0.2s ease;
+  
+  
+  }
+ 
+  
+}
+@media screen and (min-width: 600px) {
+  body {
+    display: grid;
+    grid-template-columns: 300px auto;
+  }
+ 
+  #drawer {
+    position: relative;
+    transform: translate(0, 0);
+  }
+ 
+  #hamburger {
+    display: none;
+  }
+}
+/* Untuk lebar layar >= 600px dan < 768px */
+@media(min-width: 400px) and (max-width: 767px) {
+  .wrapper {
+    padding: 20px 20px; /* Sesuaikan padding sesuai kebutuhan */
+  }
+  .hero h1 {
+    position: absolute;
+    top: 20%;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: rgb(27, 33, 112); 
+    text-align: center; 
+    font-size: 30px; 
+    font-weight: bold; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    min-height: 44px;
+    min-width: 44px;
+  }
+  .hero p {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: rgb(80, 52, 179);
+    text-align: center;
+    font-size: 19px;
+    font-weight: bold; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    z-index: 1; 
+    min-height: 44px;
+    min-width: 44px;
+  }
+  .btn {
+    display: inline-block;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 10px 18px;
+    background-color: #2f9485; 
+    color: white; 
+    font-size: 16px; 
+    text-decoration: none; 
+    border: none; 
+    border-radius: 5px;
+    transition: background-color 0.3s ease; 
+    position: absolute;
+    top: 70%; 
+    left: 40%;
+    transition: transform 0.2s ease;
+  
+  
+  }
+}
+
+/* Untuk lebar layar < 600px */
+@media(max-width: 399px) {
+  .wrapper {
+    padding: 20px 10px; /* Sesuaikan padding sesuai kebutuhan */
+  }
+  .hero h1 {
+    position: absolute;
+    top: 14%;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: rgb(27, 33, 112); 
+    text-align: center; 
+    font-size: 25px; 
+    font-weight: bold; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    min-height: 44px;
+    min-width: 44px;
+  }
+  .hero p {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: rgb(80, 52, 179);
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    z-index: 1; 
+    min-height: 44px;
+    min-width: 44px;
+  }
+  .btn {
+    display: inline-block;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 10px 18px;
+    background-color: #2f9485; 
+    color: white; 
+    font-size: 16px; 
+    text-decoration: none; 
+    border: none; 
+    border-radius: 5px;
+    transition: background-color 0.3s ease; 
+    position: absolute;
+    top: 70%; 
+    left: 37%;
+    transition: transform 0.2s ease;
+  
+  
+  }
+}
+
